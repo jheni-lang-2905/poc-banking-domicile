@@ -1,0 +1,26 @@
+/meu-projeto
+│
+├── cmd/                     # Arquivos principais de execução (ex: main.go)
+│
+├── internal/
+│   ├── domain/              # Entidades e interfaces principais
+│   │   ├── user.go          # Entidade User
+│   │   └── repository.go    # Interface de repositório (porta)
+│   │
+│   ├── usecase/             # Camada de casos de uso (interatores)
+│   │   └── user_usecase.go  # Lógica de negócio para usuários
+│   │
+│   ├── repository/          # Implementações concretas de armazenamento
+│   │   └── user_repository.go  # Repositório que implementa repository.go
+│   │
+│   ├── delivery/            # Interfaces externas (REST, gRPC, CLI)
+│   │   └── http/
+│   │       └── user_handler.go # Handlers HTTP
+│   │
+│   └── config/              # Configurações e inicialização de recursos
+│       └── config.go
+│
+├── pkg/                     # Bibliotecas externas reutilizáveis (opcional)
+│
+├── go.mod                   # Modulo do Go
+└── go.sum
