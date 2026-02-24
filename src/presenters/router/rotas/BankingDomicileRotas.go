@@ -6,7 +6,7 @@ import (
 	"github.com/poc-banking-domicile/src/presenters/controllers"
 )
 
-var BankingDomicileRotas = Rotas[]{
+var BankingDomicileRotas = []Rotas{
 	{
 		URI:    "/validator/{pvNumber}",
 		Metodo: http.MethodGet,
