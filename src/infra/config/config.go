@@ -11,6 +11,9 @@ import (
 var (
 	UrlValidator = ""
 	ApiPort      = 0
+	Host         = ""
+	XApiKey      = ""
+	XApiGtwId    = ""
 )
 
 func VariablesLoading() {
@@ -24,4 +27,8 @@ func VariablesLoading() {
 	if err != nil {
 		ApiPort = 8082
 	}
+
+	Host = os.Getenv("HOST")
+	XApiKey = os.Getenv("XAPIKEY")
+	XApiGtwId = os.Getenv("XAPIGTWID")
 }
